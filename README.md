@@ -62,7 +62,8 @@ ormneo.Connection.connect('neo4j', 'databasepass', 'localhost');
   const ORMNeoRelation = ormneo.ORMNeoRelation;
   const ORMNeoWhere = ormneo.ORMNeoWhere;
 
-  ORMNeoRelation.find(node1.id, node2.id, 'relatedto', new ORMNeoWhere('property', {$eq: 'c'})).then((nodes) => {
+  ORMNeoRelation.find(node1.id, node2.id, 'relatedto', new ORMNeoWhere('property', {$eq: 'c'}))
+  .then((nodes) => {
         //Found relation nodes.
   }).catch((error) => {
         //Handle error.
